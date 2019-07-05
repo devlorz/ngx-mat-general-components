@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ngx-mat-general-components/ngx-mat-intl-tel": [
+        "libs/ngx-mat-intl-tel/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

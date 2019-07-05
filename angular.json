@@ -12,7 +12,7 @@
       },
       "root": "apps/ngx-mat-general-components",
       "sourceRoot": "apps/ngx-mat-general-components/src",
-      "prefix": "ngx-mat-general-components",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -26,7 +26,10 @@
               "apps/ngx-mat-general-components/src/favicon.ico",
               "apps/ngx-mat-general-components/src/assets"
             ],
-            "styles": ["apps/ngx-mat-general-components/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/ngx-mat-general-components/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -123,6 +126,37 @@
               "!apps/ngx-mat-general-components-e2e/**"
             ]
           }
+        }
+      }
+    },
+    "ngx-mat-intl-tel": {
+      "projectType": "library",
+      "root": "libs/ngx-mat-intl-tel",
+      "sourceRoot": "libs/ngx-mat-intl-tel/src",
+      "prefix": "ngx",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-mat-intl-tel/tsconfig.lib.json",
+              "libs/ngx-mat-intl-tel/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ngx-mat-intl-tel/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ngx-mat-intl-tel/jest.config.js",
+            "tsConfig": "libs/ngx-mat-intl-tel/tsconfig.spec.json",
+            "setupFile": "libs/ngx-mat-intl-tel/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }

@@ -1,0 +1,43 @@
+<label *ngIf="label">{{ label }}</label>
+<div class="phone-input" [formGroup]="form">
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu" class="country-selector">
+      <div class="button-wrapper">
+        <div class="flag-wrapper">
+          <span
+            class="country-selector-flag flag"
+            [ngClass]="selectedCountry.flagClass"
+          ></span>
+          <span class="country-selector-code"
+            >+{{ selectedCountry.dialCode }}</span
+          >
+        </div>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </div>
+    </button>
+    <mat-menu #menu="matMenu" yPosition="below">
+      <button
+        type="button"
+        mat-menu-item
+        class="country-list-button"
+        *ngFor="let country of allCountries"
+        (click)="onCountrySelect(country)"
+      >
+        <div class="icon-wrapper">
+          <div class="flag" [ngClass]="country.flagClass"></div>
+        </div>
+        <div class="label-wrapper">
+          {{ country.name }} +{{ country.dialCode }}
+        </div>
+      </button>
+    </mat-menu>
+  </div>
+  <mat-form-field floatLabel="never" appearance="outline" class="phone-number">
+    <input
+      matInput
+      type="tel"
+      autocomplete="off"
+      formControlName="phoneNumber"
+    />
+  </mat-form-field>
+</div>
