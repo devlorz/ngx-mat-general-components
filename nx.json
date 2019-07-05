@@ -1,0 +1,18 @@
+{
+  "npmScope": "ngx-mat-general-components",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "ngx-mat-general-components-e2e": {
+      "tags": []
+    },
+    "ngx-mat-general-components": {
+      "tags": []
+    }
+  }
+}
