@@ -1,0 +1,21 @@
+<div class="container">
+  <mat-form-field
+    floatLabel="never"
+    appearance="outline"
+    *ngFor="let item of digitsForm.controls; let i = index"
+  >
+    <input
+      id="digit-{{ i }}"
+      matInput
+      type="text"
+      autocomplete="off"
+      [formControl]="item"
+      maxlength="1"
+      onlyNumber="true"
+      (keypress)="keytab($event, i)"
+      (keyup.backspace)="keytab($event, i)"
+      (keyup.arrowLeft)="keytab($event, i)"
+      (keyup.arrowRight)="keytab($event, i)"
+    />
+  </mat-form-field>
+</div>

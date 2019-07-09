@@ -16,6 +16,9 @@
     },
     "ngx-mat-intl-tel": {
       "tags": []
+    },
+    "ngx-mat-digit-input": {
+      "tags": []
     }
   }
 }

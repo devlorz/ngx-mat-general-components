@@ -159,6 +159,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "ngx-mat-digit-input": {
+      "projectType": "library",
+      "root": "libs/ngx-mat-digit-input",
+      "sourceRoot": "libs/ngx-mat-digit-input/src",
+      "prefix": "ngx-mat-general-components",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-mat-digit-input/tsconfig.lib.json",
+              "libs/ngx-mat-digit-input/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ngx-mat-digit-input/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ngx-mat-digit-input/jest.config.js",
+            "tsConfig": "libs/ngx-mat-digit-input/tsconfig.spec.json",
+            "setupFile": "libs/ngx-mat-digit-input/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

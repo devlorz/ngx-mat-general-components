@@ -18,6 +18,9 @@
     "paths": {
       "@ngx-mat-general-components/ngx-mat-intl-tel": [
         "libs/ngx-mat-intl-tel/src/index.ts"
+      ],
+      "@ngx-mat-general-components/ngx-mat-digit-input": [
+        "libs/ngx-mat-digit-input/src/index.ts"
       ]
     }
   },

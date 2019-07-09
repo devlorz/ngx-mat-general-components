@@ -1,0 +1,15 @@
+@import "./text-field";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  grid-column-gap: 5px;
+}
+
+:host ::ng-deep mat-form-field .mat-form-field-wrapper {
+  padding-bottom: 0;
+
+  .mat-form-field-infix input {
+    text-align: center;
+  }
+}
