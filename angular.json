@@ -190,6 +190,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "directives": {
+      "projectType": "library",
+      "root": "libs/directives",
+      "sourceRoot": "libs/directives/src",
+      "prefix": "ngx-mat-general-components",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/directives/tsconfig.lib.json",
+              "libs/directives/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/directives/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/directives/jest.config.js",
+            "tsConfig": "libs/directives/tsconfig.spec.json",
+            "setupFile": "libs/directives/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

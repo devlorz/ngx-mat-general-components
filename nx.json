@@ -19,6 +19,9 @@
     },
     "ngx-mat-digit-input": {
       "tags": []
+    },
+    "directives": {
+      "tags": []
     }
   }
 }
