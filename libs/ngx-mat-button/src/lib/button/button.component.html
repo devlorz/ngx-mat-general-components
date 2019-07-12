@@ -1,0 +1,23 @@
+<button *ngIf="flat" mat-flat-button [type]="type" [disabled]="disabled" [color]="color">
+  <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+</button>
+
+<button
+  *ngIf="stroked"
+  mat-stroked-button
+  [type]="type"
+  [disabled]="disabled"
+  [color]="color"
+  class="semi-bold"
+>
+  <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+</button>
+
+<button *ngIf="!stroked && !flat" mat-button [type]="type" [disabled]="disabled" [color]="color">
+  <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+</button>
+
+<ng-template #buttonContent>
+  <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+  <ng-content></ng-content>
+</ng-template>
