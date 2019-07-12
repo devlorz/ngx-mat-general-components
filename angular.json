@@ -221,6 +221,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "ngx-mat-button": {
+      "projectType": "library",
+      "root": "libs/ngx-mat-button",
+      "sourceRoot": "libs/ngx-mat-button/src",
+      "prefix": "ngx-mat-general-components",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-mat-button/tsconfig.lib.json",
+              "libs/ngx-mat-button/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ngx-mat-button/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ngx-mat-button/jest.config.js",
+            "tsConfig": "libs/ngx-mat-button/tsconfig.spec.json",
+            "setupFile": "libs/ngx-mat-button/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

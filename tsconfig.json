@@ -22,7 +22,12 @@
       "@ngx-mat-general-components/ngx-mat-digit-input": [
         "libs/ngx-mat-digit-input/src/index.ts"
       ],
-      "@ngx-mat-general-components/directives": ["libs/directives/src/index.ts"]
+      "@ngx-mat-general-components/directives": [
+        "libs/directives/src/index.ts"
+      ],
+      "@ngx-mat-general-components/ngx-mat-button": [
+        "libs/ngx-mat-button/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

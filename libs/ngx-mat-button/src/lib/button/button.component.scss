@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+button {
+  font-size: 14px;
+  height: 37px;
+  width: 100%;
+  display: block;
+  padding: 0 10px;
+}
+
+mat-icon {
+  margin-right: 8px;
+  position: relative;
+  top: -1px;
+}
+
+:host.inline {
+  display: inline-block;
+
+  button {
+    width: auto;
+    display: inline-block;
+  }
+}
+
+.semi-bold {
+  font-weight: 600;
+}
